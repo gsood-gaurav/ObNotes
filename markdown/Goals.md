@@ -1,0 +1,12 @@
+- ALGOS for decision Making
+	- Bayesian Networks
+	- Sequential Decision Making
+- Differentiable Programming
+	- AD frameworks
+	- Concepts
+- Diffusion Models
+	- Markov Chains
+	- Sampling
+	- Diffusion Model Architectures
+	- 
+- Large Language Models (LLMs)

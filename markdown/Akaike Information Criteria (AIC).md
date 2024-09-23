@@ -1,0 +1,1 @@
+Because many different models may adequately represent a given [[Time Series]], we also discuss useful model selection criteria such as Akaike's Information criteria (AIC)

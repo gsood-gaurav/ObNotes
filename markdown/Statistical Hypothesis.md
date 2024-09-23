@@ -1,0 +1,1 @@
+In statistics, every conjecture concerning the unknown probability distribution of a collection of random variables representing the observed data $X$ is some study is called Statistical Hypothesis.

@@ -1,0 +1,2 @@
+- A standard way to measure disimilarity between probability distributions $p$ and $q$ is the Kullback Leibler divergence or KL divergence.
+- $D_{KL}(p||q) = \sum_y p(y) log p(y)/ q(y)$   

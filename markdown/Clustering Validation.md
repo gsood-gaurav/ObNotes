@@ -1,0 +1,1 @@
+One of the most challenging aspects of clustering is validation, which is the objective and quantative assesment of clustering results.

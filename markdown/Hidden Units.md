@@ -1,0 +1,4 @@
+## Logistic Sigmoid and Hyperbolic Tangent
+- The widespread saturation of sigmoidal units can make gradient-based learning very difficult.  For this reason there use as hidden unit in feedforward networks is now discouraged. Their use as output units is compatible with use of gradient based learning when as appropiate cost function can undo the saturation of the sigmoid in the output layer.
+- When a sigmoidal activation function must be used, the hyperbolic function tangent activation function typically performs better than logistic sigmoid.
+- Sigmoidal activation functions are more common in settings other than feedforward networks. Recurrent networks, many probabilistic models, and some autoencoders have additional requirements that rule out the use of piecewise linear activation functions and make sigmoidal units more appealing despite the drawbacks of saturation.

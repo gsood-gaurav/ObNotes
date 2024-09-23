@@ -1,0 +1,1 @@
+Decision Trees are non linear models. Parition the space into individual regions. Greedy top-down recursive partitioning 

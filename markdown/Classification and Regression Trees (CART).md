@@ -1,0 +1,1 @@
+Cart models tree structure is good for capturing interactions.

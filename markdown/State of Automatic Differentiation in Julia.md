@@ -1,0 +1,10 @@
+- AD differentiates functions expressed as programs.
+- Three different users types
+	- Users who want to differentiate function and exploits third party library packages
+	- Library developers who wants to write differentiable functions
+	- Backend developers who develops AD backends
+- Various Flavors of Differentiation
+	- Manual
+	- Numeric
+	- Symbolic
+	- Automatic

@@ -1,0 +1,1 @@
+Not rejecting may be a good result if we want to continue to act as if we believe the null hypothesis is true. Or it may be a disappointing result possibly indicating we may not yet have enough data to prove someting by rejecting the null hypothesis.

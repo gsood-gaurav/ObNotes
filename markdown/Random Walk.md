@@ -1,0 +1,1 @@
+A speical type of time series, where values tend to presist over time and the differences between periods are simply white noise.

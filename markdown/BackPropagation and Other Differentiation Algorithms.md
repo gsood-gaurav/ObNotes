@@ -1,0 +1,5 @@
+- Forward Propagation: When we use a feedforward neural network to accept an input x and produce an output $\hat{y}$. This is called forward propagation
+- During training forward propagation can continue onward until it produces a scalar cost $J(\theta)$.
+- The backprop alogrithm allows the information from the cost to then flow backward through the network in order to compute the gradient.
+- **Backprop** is used to calculate numerically the gradient, while another algorithm such as **Stochastic Gradient Descent** is used to perform learning using this gradient.
+- The idea of computing derivatives by propagating information through a network is very general and can be used to compute values such as the Jacobian of a function *f* with mutiple outputs

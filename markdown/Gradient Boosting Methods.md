@@ -1,0 +1,1 @@
+Gradient Boosting refers to a methodology in machine learning where an ensemble of weak learners is  used to improve the model performance in terms of _efficency, accuracy and interpretability_.  These learners are defined as having better performance than random chance. Such models are typically decision trees and their outputs are combined for better results.

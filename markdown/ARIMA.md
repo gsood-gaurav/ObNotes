@@ -1,0 +1,1 @@
+ARIMA refers to general class of parameteric models that are useful for describing stationary, non stationary, seasonal and nonseasonal time series.

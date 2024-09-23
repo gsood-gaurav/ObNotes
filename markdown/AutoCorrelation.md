@@ -1,0 +1,1 @@
+Just as correlation measures the extent of linear relationship between two variables, autocorrelation measures the linear relationship between lagged values of a time series.

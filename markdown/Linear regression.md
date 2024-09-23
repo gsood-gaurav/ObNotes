@@ -1,0 +1,11 @@
+In linear regression, the relationship is modelled using linear predictor functions whose unknown parameters are estimated from the data. Such models are called linear models. Most commonly the conditional mean of the response given the values of the explanatory variables is assumed to be affine function of those values; less commonly the conditional median or some other quantile is used. Like all form of regression analysis, linear regression focuses on the conditional probability distribution of the response given the values of predictors rather than on the joint probability distribution of all these variables which is domain of multivariate analysis.
+
+$$y_i = \beta_0 + \beta_1x_{i1}+...+\beta_mx_{im}$$
+## Notation and Terminology
+
+- $\textbf{y}$ is a vector of observed values $y_i (i=1,...,n)$ of the variable called the regressand, endogenous variable, response variable, measured variable, criterion variable and dependent variable. 
+- $\textbf{X}$ may be seen as a matrix of row-vectors $\textbf{x}_i$ or column vectors $x_{.j}$ which are known as regressors, exogenous variables, explanatory variables, covariates, input variables, predictor variables, indepedent variables.
+	- Sometimes one of the regressors can be non-linear function of another regressor or of the data, as in polynomial regression an segmented regression. The model remains linear as long as it is linear in the parameter vector $\beta$. 
+	- $\epsilon$ is a vector of values. This part of the model is called the error term, disturbance term or sometimes noise. This variable captures all other factors which influence the dependent variable $y$ other than the regressor $\textbf{x}$. The relationship between the error term and the regressors, for example their correlation is a crucial consideration in formulating a linear regression model as it will determine the appropiate estimation method.
+## Assumptions
+- **Constant Variance** (a.k.a homoscedasticity) This means that the variance of the errors does not depend upon the values of the predictor variables. Thus the variability of the responses for given fixed values of the predictors is the same regardless of how large or small the responses are. This is often not the case, as a variable whose mean is large will typically have a greater variance than one whose mean is small. 

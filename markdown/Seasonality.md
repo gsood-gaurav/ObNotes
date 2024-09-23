@@ -1,0 +1,3 @@
+In [[Time Series]] seasonality is the presence of variations that occur at specific intervals less than a year such as weekly, monthly or quarterly. Seasonality may be caused by various factors such as weather, vacation and holidays and consist of periodic, repetitive and generally regular and predictable patterns in the levels of a time series.
+
+Seasonal fluctuations in a time series can be contrasted with cyclical patterns. The latter occurs when data exhibits rises and falls that are not of fixed period. Such non-seaonal fluctuations are usually due to economic conditions and often related to business cycle, their period usually extends beyond a single year, and the fluctuations are usually of atleast two years.

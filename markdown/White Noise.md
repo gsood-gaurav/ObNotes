@@ -1,0 +1,3 @@
+- constant mean
+- constant std deviation
+- no auto correlation.

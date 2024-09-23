@@ -1,0 +1,5 @@
+An Autoencoder is a neural network that is trained to attempt to copy its input to its output. Internally it has hidden layer $h$ that describes a code used to represent the input. The network may be viewed as consisting of two parts: an encoder function $h = f(x)$ and a decoder that produces the reconstruction $r=g(h)$. If an Autoencoder succeeds in simply learning to set $g(f(x)) = x$ everywhere, then it is not especially useful. Instead autoencoders are designed to be unable to learn to copy perfectly. Usually they are restricted in ways that allow them to copy only apporximately and to copy ony input that resembles the training data.
+
+Modern autoencoders have generalized the idea of an encoder and a decoder beyond deterministic functions to stochasitc mappings $p_{encoder}(h|x)$  and $p_{decoder}(x|h)$.
+
+Traditionally autoencoders were used for dimensionality reduction or feature learning. Recently theoretical connection between autoencoders and latent variable models have brought autoencoders to the forefront of generative modelling. 

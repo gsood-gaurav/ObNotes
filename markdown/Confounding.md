@@ -1,0 +1,1 @@
+The Partial Dependence Plot shows the marginal effect one or two features have on the predicted outcome of a machine learning model. A PDP can show whether the relationship between the target and a feature is linear, monotonic or more complex. For example, when applied to linear regression model PDP always shows a linear relationship.

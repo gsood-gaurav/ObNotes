@@ -1,0 +1,8 @@
+- A Central problem in machine learning is how to make an algorithm that will perform well not just on training data, but also on new inputs
+- Many stratgies in Machine Learning are explicitly designed to reduce the test error, possibly at the expense of increased training error. These stratgies are kown collectively as regularization.
+- Regularization is any modification we make to a learning algorithm that is intended to reduce its generalization error but not its training error.
+- There are many regularization stratgies. Some put extra constraints on a machine learning model, such as adding restrictios on the parameter values. Some add extra terms in objective function that can thought of as corresponding to a soft constraint on the parameter values.
+- Sometimes these constraints and penalities are designed to encode specific kinds of prior knowledge. Other times these constraints and penalities are designed to express a generic preference for a simpler model class in order to promote generalization. **Some times penalities and constraints are required to make an undetermined problem determined.**
+- Other form of ensemble methods combine multiple hypothesis that explain the training data.
+- **In context of deep learning most regularization stratgies are based on regularizing estimators. Regularization of estimator works by trading increased bias for reduced variance**. 
+- A effective regularizer is one that makes a profitable trade, reducing variance significantly while not overly increasing the bias.
