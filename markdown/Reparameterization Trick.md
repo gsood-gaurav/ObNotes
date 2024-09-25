@@ -1,0 +1,1 @@
+Using Reparameterization trick sampling from arbitrary distribution can be performed by sampling from a standard Gaussian, scaling result by the target standard deviation, and shifting it by the target mean. 

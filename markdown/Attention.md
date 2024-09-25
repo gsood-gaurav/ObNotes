@@ -1,0 +1,4 @@
+- Attention in general refers how much a token at a particular time step aggregates information from other tokens at different time steps. Such an aggregation is implemented in the form of scaled dot product.
+- We take weighted sum of every dimension (of value vector) at every time step using attention matrix ($\frac{QK^T}{\sqrt{d_{k}}}$), where $d_k$ is the head size (or query/key head size) That is how we update the representation of every word in a sequence.
+- Feed Forward layer acts upon per token basis.
+- $d_{model}$ is n_embd, $d_{ff}$ is internal feedforward dimension.

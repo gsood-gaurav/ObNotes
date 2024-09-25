@@ -1,0 +1,1 @@
+MCMC methods are appealing because they provide a straight-forward, intuitive way to both simulate values from an unknown distribution and use these simulated values to perform subsequent analysis.

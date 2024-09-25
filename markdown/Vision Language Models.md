@@ -1,0 +1,11 @@
+- Do we need to train a text encoder or can we leverage a pre-trained LLM
+- Is a contrastive loss enough for vision understanding or is generative component key?
+- There has been several initiatives to bridge NLP and CV
+	- Recent initiatives to bridge this gap consist of transformers.
+-  We categorize these recent initiatives into four different paradigms
+	- **Contrastive Training**: Uses pairs of positive and negative examples. The VLM is then trained to predict similar representation for positive pairs while predicting different representations for the negative pairs.
+	- **Masking**: leverages reconstruction of masked image patches given unmasked text. Similarly by masking words in a caption it is possible to train a VLM to reconstruct those words given an unmasked image.
+	- Pretrained Backbones often leverages LLMs like Llama to learn a mapping between an image encoder (which could also be pretrained) and the LLM
+	- Generative VLMs are trained in such a way that they can generate images or captions.
+	
+		-

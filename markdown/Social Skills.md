@@ -1,0 +1,12 @@
+- There are no friends but work colleagues.
+- People will try to put one down.
+- Be aggressive in a calm manner.
+- Speak Slowly (British accent).
+- Don't say things directly.
+- Control your emotions.
+- Don't be aggressive or passive, be assertive.
+- Respond to content not tone.
+- Don' t respond immediately.
+- "I" approach instead of "you".
+	- Instead of saying "**you will delay**" say "**I am concerned about the delay**".
+- Don't react but act.

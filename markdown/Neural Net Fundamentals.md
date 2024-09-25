@@ -1,0 +1,9 @@
+- Weight Initalization
+	- All below factors makes initialization less 
+	- Normalize weights by square root of fan-in
+- Residual Connection
+- Normalization
+	- BN performs standardization across batch dimension. It couples examples across batch which is not good. Other options, LayerNorm, GroupNorm etc.
+	- BN to control the statistics of activations.
+	- BN layers are placed after the linear layers or convolution layers  before applying activation non-linearity
+- Optimizers
