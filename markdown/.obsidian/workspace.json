@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ALGOS FOR DECISION MAKING Inference.md",
+                "file": "MCMC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1af13a6959e2dce4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Monte Carlo methods.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ALGOS FOR DECISION MAKING Inference.md",
+                "file": "Monte Carlo methods.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ALGOS FOR DECISION MAKING Inference.md",
+                "file": "Monte Carlo methods.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ALGOS FOR DECISION MAKING Inference.md"
+                "file": "Monte Carlo methods.md"
               }
             }
           }
@@ -146,8 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "861afb5bcae63ca5",
+  "active": "1af13a6959e2dce4",
   "lastOpenFiles": [
+    "MCMC.md",
+    "Monte Carlo methods.md",
+    "ALGOS FOR DECISION MAKING Inference.md",
     "Maximum Likelihood.md"
   ]
 }
