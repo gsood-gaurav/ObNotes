@@ -1,4 +1,4 @@
-The Monte Carlo Method is a computational method that consists in using computer generated sample from a given probability distribution to produce a **plugin estimate** of some feature of the given distribution (such as, for example, a moment or a quantile)
+The Monte Carlo Method is a computational method that consists in using computer generated sample from a given probability distribution to produce a **plugin estimate** of some feature of the given distribution (such as, for example, a moment or a quantile). Samples are independent as compared to Markov chain monte carlo where samples can be correlated.
 
 Let $\mathcal{X}$ be a random variable with distribution function $F_X(x)$ and suppose that we can generate a sample (through computer)
 
