@@ -1,0 +1,5 @@
+- where **Roughly right** is **precisely wrong**
+- looks like a good answer is what you want.
+- Predictive AI and Generative AI are two kinds AI
+- Predictive AI means predicting something about people.
+- 

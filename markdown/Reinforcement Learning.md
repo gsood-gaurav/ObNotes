@@ -8,6 +8,8 @@ mapping situations to actions in order to maximize numerical reward signal.
 Discover which actions yield more reward by trying them.
 In most interesting and challenging cases current action may not only affect immediate reward, but also next situation and through that subsequent rewards.
 
+Can we say RL is computational approach to solving Sequential Decision Making which is formalized using Markov Decision Processes.
+
 > [!note] Two most important characteristics of RL
 > - Trial and Error
 > - Delayed Reward
@@ -46,7 +48,7 @@ Introduce the formal problem of finite MDPs which we try to solve in rest of the
 The problem involves <span style="color:rgb(146, 208, 80)">evaluative feedback</span> as in bandits but also and <span style="color:rgb(146, 208, 80)">associative aspect</span>----- choosing different actions in different situations. MDPs are classical formalization of <span style="color:rgb(146, 208, 80)">Sequential Decision Making</span>, where actions not only influence immediate rewards but also subsequent states and through those future rewards. Thus MDPs involve <span style="color:rgb(0, 112, 192)"><span style="color:rgb(0, 112, 192)">delayed reward</span></span> and the need to tradeoff immediate and delayed reward. (<span style="color:rgb(255, 0, 0)">The rewards are delayed as we are accounting for rewards which we are going to receive in future and hasn't got yet, so it has been delayed in a way?. In sequential decision making delyaed rewards becomes important.</span>)
 
 >[!note] Bandits vs RL
->In bandits we estimate $q^*(a)$ for each action $a$, in MDPs we estimate $q^*(s, a)$ for each action is state s or we estimate value $v_*(s)$ for each state given optimal action selections.
+>In bandits we estimate $q_*(a)$ for each action $a$, in MDPs we estimate $q_*(s, a)$ for each action is state s or we estimate value $v_*(s)$ for each state given optimal action selections.
 
 <span style="color:rgb(146, 208, 80)">MDPs are mathematically idealized form of Reinforcement Learning problem for which precise theoretical statements can be made.</span>
 
@@ -82,14 +84,14 @@ $$
 
 The general rule we follow is that anything that cannot be changed arbitrarily by the agent is considered to be part of environment.
 
-It is typical in reinforcement learning tasks to have states and actions with such structured representation like vector or list of numbers.
+It is typical in reinforcement learning tasks to have states and actions with such structured representation like vector or list of numbers. Rewards on the other hand are always list of numbers. 
 ## Reward and Returns
 
 Goal of the agent is formalized in terms of `rewards`. 
 
 >[!note] That all of what we mean by goals and purposes can be well thought of as the maximization of the expected value of cumulative sum of  received scalar signal(called reward).
 
-The sequence of rewards after time $t$ is denoted by $R_{t+1},R_{t+2},R_{t+3}\cdots$ then return is defined as any function of this reward sequence. One common choice of function is take the sum so return  becomes the cumulative sum of reward sequence and goal is to maximize the expectation of this cumulative sum.
+The sequence of rewards after time $t$ is denoted by $R_{t+1},R_{t+2},R_{t+3}\cdots$ then return is defined as any **function of this reward sequence**. One common choice of function is take the sum so return  becomes the cumulative sum of reward sequence and goal is to maximize the expectation of this cumulative sum.
 $$
 G_t = R_{t+1}+R_{t+2}+R_{t+3}+ \cdots + R_T
 $$
@@ -104,6 +106,16 @@ $$
 ## Policies and Value Functions
 
 Almost all RL algorithms involve <span style="color:rgb(255, 0, 0)">estimating</span> <span style="color:rgb(255, 0, 0)">value functions</span>--functions of states $v_\pi$(or of state-action pairs $q_\pi$) that estimate how good it is for the agent to be in a given state (or how good it is to perform a given action in  a given state). The notion of "how good" here is defined in terms of future rewards that can be expected or to be precise, in terms of <span style="color:rgb(146, 208, 80)">expected return</span>. Of course the rewards the agent can expect to receive in the future depend on what actions it will take. Accordingly value functions are defined with respect to particular ways of acting called <span style="color:rgb(255, 0, 0)">policies</span>.
+
+$$
+v_\pi(s) = \mathbb{E}_\pi[G_t|S_t=s] = \mathbb{E}\bigg[\sum_{k=0}^\infty\gamma^kR_{t+k+1}|S_t=s\bigg] \forall s \in S
+$$
+Similarly we define the value of taking action $a$ in state $s$ under a policy $\pi$, denoted by $q_\pi(s, a)$ as the expected return starting from $s$ taking the action $a$ and thereafter following the policy $\pi$
+
+$$
+q_\pi(s, a) = \mathbb{E}_\pi[G_t|S_t=s, A_t=a] = \mathbb{E}\bigg[\sum_{k=0}^\infty\gamma^kR_{t+k+1}|S_t=s, A_t=a\bigg] \forall s \in S, a\in A
+$$
+where $\mathbb{E}_\pi[\cdot]$  is expected value of random variable given that the agent follows policy $\pi$.
 
 The value functions $v_\pi$ and $q_\pi$ can be estimated from experience. For example, if an agent follows policy $\pi$ and maintains average, for each state encountered, of the actual returns that have followed that state, then the average will converge to the state's value, $v_\pi(s)$, as the number of times that state is encountered approaches infinity. If separate averages are kept for each action taken in each state, then these averages will similarly converge to the action values, $q_\pi(s, a)$. We call estimation methods of this kind <span style="color:rgb(255, 0, 0)">Monte Carlo Methods</span> because they involve averaging over many random samples of actual returns. Of course, if there are very many states, then it may not be practical to keep separate averages for each state individually, Instead, the agent would have to maintain $v_\pi$ and $q_\pi$ as parameterized functions (with fewer parameters than states) and adjust the parameters to better match the observed returns.
 
@@ -123,7 +135,9 @@ v_\pi(s) &= \mathbb{E}_\pi[G_t|S_t=s] \\
 &= \sum_a\pi(a|s)\sum_{s'}\sum_rp(s', r|s, a)[r + v_\pi(s')]
 \end{align*}
 $$
-$v_\pi(s)$ is called state value function.
+$v_\pi(s)$ is called state value function. This can re read as expected value. For every triple $a,s,r$ we compute the probability $\pi(a|s)\ p(s',r|s,a)$  weight the quantity in brackets by that probability then sum over all possibilities to get an expected value.
+
+The value function $v_\pi$ is the unique solution to its Bellman Equation. We show in subsequent chapters how this Bellman Equation forms the basis of number of ways to compute, approximate and learn $v_\pi$ 
 
 >[!note] The existence and uniqueness of $v_\pi$ is guaranteed as long as either $\gamma <1$ or eventual termination is guaranteed from all states under the policy $\pi.$
 
@@ -186,13 +200,25 @@ In fact, all of these methods can be viewed as attempts to achieve much the same
 
 >[!note] The key idea of DP, and of reinforcement learning generally, is the use of value functions to organize and structure the search for good policies.
 
+We can easily obtain optimal policies once we have found the optimal value functions $v*$, $q*$.
+
+$$
+\begin{align*}
+v_*(s) &= \underset{a}{max}\ \mathbb{E}\big[R_t + \gamma v_*(S_{t+1})\ |S_t=s, A_t=a\big] \\
+&= \underset{a}{max} \sum_{s',r}p(s',r|s,a) [r+\gamma v_*(s')] \\
+
+q_*(s, a) &=  \mathbb{E}\big[R_t + \underset{a}{max}\ \gamma q_*(S_{t+1}, a')\ |S_t=s, A_t=a\big] \\
+&= \underset{a}{max} \sum_{s',r}p(s',r|s,a) [r+\gamma v_*(s')]
+
+\end{align*}
+$$
 ## Policy Evaluation
 
 Policy evaluation for an arbitrary policy $\pi$ is computing its state-value function.
 
->[!quote] In numerical fixed-point iteration is a method of computing fixed points of a function. A fixed point is a value that doesn't change under transformation. Specifically for functions a fixed point is mapped to itself by the function.
+>[!quote] Numerical fixed-point iteration is a method of computing fixed points of a function. A fixed point is a value that doesn't change under transformation. Specifically for functions a fixed point is mapped to itself by the function.
 
-We evaluate policy using iterative methods. We construct a sequence of approximations to value function starting at $v_0$ and using Bellman Equation as an <span style="color:rgb(255, 0, 0)">update rule</span> to arrive at next element in the sequence.
+We evaluate policy using iterative methods. We construct a sequence of approximations to value function starting at $v_0$ (chosen arbitrarily except any terminal state, if any, is given zero value ) and using Bellman Equation as an <span style="color:rgb(255, 0, 0)">update rule</span> to arrive at next element in the sequence.
 
 $$
 \begin{align*}
@@ -202,12 +228,11 @@ v_{k+1}(s) &= \mathbb{E}_\pi[R_{t+1} + \gamma v_k(S_{t+1})|S_t=s]\\
 \end{align*}
 $$
 
->[!bug] Clearly $v_k = v_\pi$ is the fixed point for this update rule because Bellman equation for $v_\pi$ ensures the equality in this case.
+>[!quote] Clearly $v_k = v_\pi$ is the fixed point for this update rule because Bellman equation for $v_\pi$ ensures the equality in this case.
 
 The update done via above update rule is called expected update because it is expectation over all states.
 
-Indeed the sequence $\{v_k\}$  can be shown in general to converge to $v_\pi$ as $k\rightarrow\infty$ under the same conditions that guarantee the existence of $v_\pi$. This algorithm is called _iterative policy evaluation._
-
+Indeed the sequence $\{v_k\}$  can be shown in general to converge to $v_\pi$ as $k\rightarrow\infty$ under the same conditions that guarantee the existence of $v_\pi$. This algorithm is called <span style="color:rgb(255, 0, 0)">iterative policy evaluation.</span>
 
 ## Policy Improvement
 
@@ -235,3 +260,23 @@ Proof: We know that
 $$
 q_\pi(s, \pi'(s)) = \mathbb{E}_\pi[R_{t+1} + \gamma v_{\pi}(s')]
 $$
+
+## Policy Iteration
+
+## Value Iteration
+
+## Asynchronous Dynamic Programming
+
+## Generalized Policy Iteration
+
+# Monte Carlo Methods
+
+First learning method for estimating value functions and discovering optimal policies. Unlike DP we do not assume complete knowledge of the environment. Monte Carlo methods require only _experience_, sample sequences of states, actions and rewards from actual or simulated environment it doesn't require complete probability distributions of all possible transitions that is required for dynamic programming (DP)
+
+Monte Carlo Methods are ways of solving reinforcement learning problem based on averaging sample returns.
+
+>[!question] To ensure well defined returns are available, here we define Monte Carlo methods only for episodic tasks. That is we assume experience is divided into episodes, and that all episodes eventually terminate no matter what actions are selected.
+
+Only on completion of episodes are value estimates and policies changed. Monte Carlo methods can thus be incremental in an episode by episode sense but in step-by-step(online) case. 
+
+

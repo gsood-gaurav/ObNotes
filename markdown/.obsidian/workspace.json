@@ -13,7 +13,55 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ALGOS FOR DECISION MAKING Inference.md",
+                "file": "RL/Reinforcement Learning Talk.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e0ca695b7d52dcd6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Reinforcement Learning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4abcfe13f671bd78",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Phi Microsoft.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bcc4ae538623fb92",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AIPhilosophy/AI scaling myths.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "df43ffb1d8008f9f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DL Interview.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ALGOS FOR DECISION MAKING Inference.md",
+                "file": "RL/Reinforcement Learning Talk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ALGOS FOR DECISION MAKING Inference.md",
+                "file": "RL/Reinforcement Learning Talk.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ALGOS FOR DECISION MAKING Inference.md"
+                "file": "RL/Reinforcement Learning Talk.md"
               }
             }
           }
@@ -148,6 +196,25 @@
   },
   "active": "861afb5bcae63ca5",
   "lastOpenFiles": [
+    "QLORA.md",
+    "Small Language Models.md",
+    "ALGOS FOR DECISION MAKING Inference.md",
+    "Reinforcement Learning.md",
+    "Phi Microsoft.md",
+    "UMAP.md",
+    "PEFT.md",
+    "AIPhilosophy/AI Agents.md",
+    "DL Interview.md",
+    "AIPhilosophy/Building AI products.md",
+    "AIPhilosophy/AI scaling myths.md",
+    "RL/Reinforcement Learning Talk.md",
+    "Untitled 1.md",
+    "RL",
+    "Linear Models (GLM, GAM and more Overview).md",
+    "Generalized Linear Model.md",
+    "Predictive Optimization.md",
+    "Untitled.md",
+    "AIPhilosophy",
     "Maximum Likelihood.md"
   ]
 }

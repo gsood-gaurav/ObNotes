@@ -1,0 +1,5 @@
+Scaling laws only quantify the decrease in perplexity, that is, improvement in how well models can predict the next word in a sequence. Of course, perplexity is more or less irrelevant to end users — what matters is “[emergent abilities](https://arxiv.org/abs/2206.07682)”, that is, models’ tendency to acquire new capabilities as size increases.
+
+Emergence is not governed by any law-like behavior. It is true that so far, increases in scale have brought new capabilities. But there is no empirical regularity that gives us confidence that this will continue indefinitely.
+
+Why might emergence not continue indefinitely? This gets at one of the core debates about LLM capabilities — are they capable of extrapolation or do they only learn tasks represented in the training data? The evidence is incomplete and there is a wide range of reasonable ways to interpret it. But we lean toward the skeptical view. On benchmarks designed to test the efficiency of acquiring skills to solve unseen tasks, LLMs tend to perform [poorly](https://arcprize.org/arc).
