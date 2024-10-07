@@ -8,6 +8,10 @@ mapping situations to actions in order to maximize numerical reward signal.
 Discover which actions yield more reward by trying them.
 In most interesting and challenging cases current action may not only affect immediate reward, but also next situation and through that subsequent rewards.
 
+>[!quote] Reinforcement Learning learns from batches of experience. The question is how do they collect it? In online reinforcement learning agent gathers data directly: it collects a batch of experience by interacting with the environment. Then, it uses the experience immediately (or via some replay buffer) to learn from it (update its policy). But this implies that either you train your agent directly in the real world or have a simulator. If you don't have one you need to build it which can be very complex. On the other hand, in offline reinforcement learning, the agent only uses data collected from other agents of human demonstrations it doesn't interact with the environment.
+
+
+
 Can we say RL is computational approach to solving Sequential Decision Making which is formalized using Markov Decision Processes.
 
 > [!note] Two most important characteristics of RL
