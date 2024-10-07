@@ -273,6 +273,7 @@ $$
 
 ## Generalized Policy Iteration
 
+In GPI, one maintains both an approximate value function and approximate policy. The value function is repeatedly altered to more closely approximate the value function of current policy (policy evaluation)  and the policy is repeatedly improved (policy improvement) w.r.t current value function.
 # Monte Carlo Methods
 
 First learning method for estimating value functions and discovering optimal policies. Unlike DP we do not assume complete knowledge of the environment. Monte Carlo methods require only _experience_, sample sequences of states, actions and rewards from actual or simulated environment it doesn't require complete probability distributions of all possible transitions that is required for dynamic programming (DP)
@@ -281,6 +282,18 @@ Monte Carlo Methods are ways of solving reinforcement learning problem based on 
 
 >[!question] To ensure well defined returns are available, here we define Monte Carlo methods only for episodic tasks. That is we assume experience is divided into episodes, and that all episodes eventually terminate no matter what actions are selected.
 
-Only on completion of episodes are value estimates and policies changed. Monte Carlo methods can thus be incremental in an episode by episode sense but in step-by-step(online) case. 
+Only on completion of episodes are value estimates and policies changed. Monte Carlo methods can thus be incremental in an episode by episode sense but not in step-by-step(online) case. 
 
+Monte Carlo methods sample and average returns of each state-action pair.
 
+>[!quote] Because all action selections are undergoing learning, the problem becomes non-stationary from the point of view of the earlier state. 
+
+An important fact of MonteCarlo methods is that the estimates for each state are independent. The estimate for one state does not build upon the estimate of any other state. In other words, Monte Carlo methods do not bootstrap. In particular computational expense of estimating the value of a single state is independent of the number of states.
+
+If model of the environment is not available then it is particular useful to estimate action values rather than state values. 
+
+>[!quote] On-policy methods attempt to evaluate or improve policy that is used to make decisions where as off-policy methods evaluate or improve a policy different from that used to generate the data. 
+
+The monte carlo methods discussed above is an example of an on-policy method. In on-policy control methods the policy is generally soft, meaning that $\pi(a|s)>0$ for all $s\in\mathcal{S}$ and all $a\in\mathcal{A}$, but gradually shifted closer and closer to deterministic optimal policy . 
+
+$\epsilon$-greedy policies
