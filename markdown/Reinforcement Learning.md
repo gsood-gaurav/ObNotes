@@ -4,6 +4,12 @@
 - consequences of actions are known
 - what to do in order to achieve goals
 
+>[!note ] Distinction between state and observation
+
+Two ways to find optimal policy/behavior
+- Value based Methods
+- Policy based methods
+
 mapping situations to actions in order to maximize numerical reward signal.
 Discover which actions yield more reward by trying them.
 In most interesting and challenging cases current action may not only affect immediate reward, but also next situation and through that subsequent rewards.
