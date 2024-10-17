@@ -1,1 +1,3 @@
-Cart models tree structure is good for capturing interactions.
+- Cart models tree structure is good for capturing interactions.
+- One line of thought is since tree based models works very well on tabular data, we strive to understand which [[Inductive Bias in Machine Learning|inductive biases]] make them well suited for these data
+- 
