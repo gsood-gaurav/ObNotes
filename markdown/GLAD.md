@@ -1,4 +1,8 @@
-Many methods overlook significance of considering relations among system components such as services and users. Understanding these relations is vital for detecting anomalies and their underlying causes. **GLAD is designed to detect relational anomalies in system logs in addition to sequential patterns, structural**. GLAD incorporates log semantics, relational patterns and sequential patterns into a unified framework for anomaly detection.
+Many methods overlook significance of **considering relations among system components** such as services and users. Understanding these relations is vital for detecting anomalies and their underlying causes. **GLAD is designed to detect relational anomalies in system logs in addition to sequential patterns, structural**. GLAD incorporates log semantics, relational patterns and sequential patterns into a unified framework for anomaly detection.
+
+>[!quote] GNNs are popular for their ability to learn relational pattern
+
+
 
 **Basic Idea**
 GLAD introduces a field extraction module based on few shot learning to identify essential fields.
@@ -19,7 +23,7 @@ Key Challenges
 - Instead merely detecting anomalies on graph level, we aim to detect anomalous edges representing the relation among nodes which is more challenging task.
 - In addition to relational patterns we need to integrate log semantics and sequential patterns as whole for anomaly detection.
 
-Unsupervised Learning which observe only normal event sequence during training has been proven to be more efficient learning paradigm. GLAD focuses on this paradigm.
+Unsupervised Learning which observe only normal event sequence during training has been proven to be more efficient learning paradigm. GLAD focuses on this paradigm. There are supervised learning paradigm too.
 
 $e = {x_1, x_2,...,x_{|e|}}$  log message is a sequence of tokens
 $S = {e_1,...,e_{|S|}}$ log sequence is a sequential series of logs
